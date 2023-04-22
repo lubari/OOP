@@ -35,6 +35,8 @@ namespace ConsoleApp
                 b = c;
             }
 
+            Console.WriteLine(Fibonacci(number));
+
             Console.ReadKey();
         }
 
@@ -68,6 +70,18 @@ namespace ConsoleApp
                 return false;
             }
             return true;
+        }
+
+        public static int Fibonacci(int n)
+        {
+            if (n < 2)
+            {
+                return n;
+            }
+            else
+            {
+                return Fibonacci(n - 1) + Fibonacci(n - 2);
+            }
         }
     }
 
