@@ -16,6 +16,58 @@ namespace ConsoleApp
             Wolf wolf = new Wolf("kyle");
             Rose rose = new Rose();
             Grass grass = new Grass();
+
+
+            int number = InputNumber();
+
+            int a = 0;
+            int b = 1;
+
+            Console.Write("Fibonacci numbers: ");
+            Console.Write(a + " ");
+            Console.Write(b + " ");
+
+            while (a + b <= number)
+            {
+                int c = a + b;
+                Console.Write(c + " ");
+                a = b;
+                b = c;
+            }
+
+            Console.ReadKey();
+        }
+
+        static int InputNumber()
+        {
+            Console.Write("Enter a natural number: ");
+            string input = "";
+            int number = 0;
+            bool isNaturalNumber = false;
+
+            while (!isNaturalNumber )
+            {
+                input = Console.ReadLine();
+                if (double.TryParse(input, out double value))
+                {
+                    number = (int)value;
+                    isNaturalNumber = IsNatural(number);
+                }
+                else
+                {
+                    Console.WriteLine("The input is not a natural number.");    
+                }
+            }
+            Console.WriteLine("The number value is " + number);
+            return number;
+        }
+
+        static bool IsNatural(int number) {
+            if (number < 0)
+            {
+                return false;
+            }
+            return true;
         }
     }
 
