@@ -37,7 +37,12 @@ namespace ConsoleApp
 
             Console.WriteLine(Fibonacci(number));
 
+         
+
+            Polynomial polynomial = new Polynomial(-3, 0, 4, 0, 0, 5, 0, -12);
+            Console.WriteLine(polynomial.ToString());
             Console.ReadKey();
+
         }
 
         static int InputNumber()
