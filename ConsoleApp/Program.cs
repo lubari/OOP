@@ -41,8 +41,18 @@ namespace ConsoleApp
 
             Polynomial polynomial = new Polynomial(-3, 0, 4, 0, 0, 5, 0, -12);
             Console.WriteLine(polynomial.ToString());
-            Console.ReadKey();
 
+            SimpleLightstring simpleLightstring = new SimpleLightstring(20);
+            ColoredLightstring coloredLightstring = new ColoredLightstring(55);
+
+            simpleLightstring.GetState();
+            coloredLightstring.GetState();
+            Console.WriteLine();
+            Console.ReadKey();
+            Console.WriteLine();
+            simpleLightstring.GetState();
+            coloredLightstring.GetState();
+            Console.ReadKey();
         }
 
         static int InputNumber()
